@@ -1,5 +1,5 @@
 
-export default function Model({setIsOpenMode}) {
+export default function Model({close}) {
     
     return (
         <div className="model">
@@ -9,7 +9,7 @@ export default function Model({setIsOpenMode}) {
             <p>
                 This is a model
             </p>
-            <button onClick={() => setIsOpenMode(false)}>
+            <button onClick={close}>
                 close
             </button>
         </div>

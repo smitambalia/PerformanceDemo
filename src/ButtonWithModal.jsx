@@ -1,16 +1,16 @@
-import { useState } from 'react'
 import Model from './Model';
+import useModel from './hooks/useModel';
 
 export default function ButtonWithModal() {
-  const [isOpenModel, setIsOpenMode] = useState(false);
+  const { isOpenModel , open , close } = useModel();
 
   return (
     <>
       {!isOpenModel && (
-        <button onClick={() => setIsOpenMode(true)}>Open Model</button>
+        <button onClick={open}>Open Model</button>
       )}
 
-      {isOpenModel && <Model setIsOpenMode={setIsOpenMode} />}
+      {isOpenModel && <Model close={close} />}
     </>
   );
 }
