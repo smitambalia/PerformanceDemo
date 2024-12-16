@@ -10,4 +10,6 @@
     - it is being installed itself on latest web browser
     - dev tool will have profiler listed
 
-# 
+# Memo
+    - Function which stops re-rendering the react component
+    - use memo function from the react library 
